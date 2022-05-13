@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        <div class="nav flex">
+            <div class="headerleft flex">
+                <h1 class="nav-title whitetext">Profile</h1>
+                <ul class="nav-links flex">
+                    <li><a class="no-underline" href="#">Home</a></li>
+                    <li><a class="no-underline whitetext" href="#" ">My Profile</a></li>
+                    <li><a class="no-underline" href="#">Find Connections</a></li>
+                </ul>
+            </div>
+            <button id="SignInOut" class="btn white" onclick="change(this)">Sign Out</button>
+        </div>
+    </div>
+    <div class="flex" id="profinfo">
+        <div id="leftside">
+            <div id="usercard">
+                <div id="uctop"></div>
+                <div id="uccontent">
+                    <img class="userpic" src="./icons/user-circle.png" alt="user icon">
+                    <h2 id="name">Jane Doe</h2>
+                    <div class="location">
+                        <img class="mapmarkpic" src="./icons/map-marker.png" alt="map marker">
+                        <h4>Seattle</h4>
+                    </div>
+                    <div class="info">
+                        <p>Developer | Engineer | Problem Solver</p>
+                        <p>Master of shadows and the Internet!</p>
+                    </div>
+                    <img class="gear" src="./icons/gear.png" alt="gear">
+                    <a id="edtProfile" onclick="nameChange()" href="#">edit profile</a>
+                </div>
+            </div>
+            <div id="education">   
+                <div class="education-top">
+                    <p class="education-title">Education</p>
+                </div>
+                <div class="education-body">
+                    <h3 class="blacktext">Coding Dojo - Full Stack Bootcamp</h3>
+                    <p class="greytext">Dec 2019 - Mar 2020</p>
+                    <p class="blacktext">Triple black belt in Python, MERN, and C#</p>
+                </div>
+            </div>
+        </div>
+        <div id="rightside">
+            <div id="connec-req">
+                <div id="connectop">
+                    <p id="circle2">2</p>
+                    <p>Connection Requests</p>
+                </div>
+                <div id="request1" class="connecrow">
+                    <div class="user flex">
+                        <img src="./icons/user-circle.png" alt="user icon">
+                        <p>Todd E</p>
+                    </div>
+                    <div class="xcheck flex">
+                        <img onclick="remove1(), addConnec()" src="./icons/accept-circle.png" alt="accept">
+                        <img onclick="remove1()" src="./icons/close-circle.png" alt="close">
+                    </div>
+                </div>
+                <div id="request2" class="connecrow">
+                    <div class="user flex">
+                        <img src="./icons/user-circle.png" alt="user icon">
+                        <p>Phil K</p>
+                    </div>
+                    <div class="xcheck flex">
+                        <img onclick="remove2(), addConnec()" src="./icons/accept-circle.png" alt="accept">
+                        <img onclick="remove2()" src="./icons/close-circle.png" alt="close">
+                    </div>
+                </div>
+            </div>
+            <div class="yourconnec">
+                <div class="yourconnec-top">
+                    <p id="circle500">418</p>
+                    <p>Your Requests</p>
+                </div>
+                <div class="yourconnec-bot">
+                    <div class="user flex">
+                        <img src="./icons/user-circle.png" alt="user icon">
+                            <p>Adrien D</p>
+                    </div>
+                    <div class="user flex">
+                        <img src="./icons/user-circle.png" alt="user icon">
+                            <p>Anne J</p>
+                    </div>
+                    <div class="user flex">
+                        <img src="./icons/user-circle.png" alt="user icon">
+                            <p>Alayne T</p>
+                    </div>
+                    <div class="user flex">
+                    <img src="./icons/user-circle.png" alt="user icon">
+                            <p>Arry Y</p></div>
+                    <div class="viewmore">
+                        <a class="viewmore" href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
